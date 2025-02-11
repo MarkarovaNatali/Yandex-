@@ -1,17 +1,10 @@
-import random
-
-a = random.randint(1, 1000)
-n = 0
-while True:
-    if n == 10:
-        print('Не угадал')
-        break
-    b = int(input())
-    if a > b:
-        print('больше')
-    if a < b:
-        print('меньше')
-    n += 1
-    if a == b:
-        print('Число отгадано')
-        break
+start, end = 0, 1001
+number = (start + end) // 2
+print(number)
+while (answer := input()) != 'Угадал!':
+    if answer == 'Больше':
+        start = (start + end) // 2
+    elif answer == 'Меньше':
+        end = (start + end) // 2
+    number = (start + end) // 2
+    print(number)
