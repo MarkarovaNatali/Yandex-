@@ -17,4 +17,4 @@ while len(n) >= 3:
     n[i] = x
     n.pop(i - 1)
     n.pop(i - 2)
-print(n[0])
+    print(n)
